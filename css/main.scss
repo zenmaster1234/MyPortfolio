@@ -1,0 +1,310 @@
+@import "config";
+@import "utilities";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background-color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+// Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Stencil Text", cursive;
+}
+
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+#header {
+  // Header home
+  &-home {
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+    background-position: 20% 30%;
+
+    // Header Content
+
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        font-family: "Castoro", serif;
+      }
+    }
+  }
+
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 6rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+#process {
+  .container {
+    padding: 0 0.2 rem;
+  }
+  .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center;
+
+    p {
+      text-align: justify;
+    }
+
+    // Process-icon
+    &-icon {
+      border-radius: 50%;
+      background: $dark-color;
+      color: #fff;
+      padding: 2rem;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      position: relative;
+      transition: all 1s;
+
+      &:hover {
+        background: $main-color;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+
+        .process-step {
+          background: $dark-color;
+        }
+      }
+    }
+
+    // Process-step
+    &-step {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 28px;
+      background: $main-color;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      line-height: 15px;
+      padding: 1rem;
+      transition: all 1s;
+    }
+  }
+}
+
+// skills
+.skills {
+  li {
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 0;
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+  }
+  display: grid;
+  grid-template-areas:
+    "html css sass"
+    "javascript bsrap git";
+  justify-content: center;
+  grid-row-gap: 2rem;
+  grid-column-gap: 5rem;
+
+  .html {
+    grid-area: html;
+  }
+  .css {
+    grid-area: css;
+  }
+  .javaScript {
+    grid-area: javaScript;
+  }
+  .git {
+    grid-area: git;
+  }
+  img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 1rem 0;
+    transition-duration: 0.25s;
+    &:hover {
+      transform: scale(1.15);
+      transition-duration: 0.25s;
+    }
+  }
+}
+
+#bars {
+  span {
+    text-transform: lowercase;
+  }
+  .bars {
+    overflow: hidden;
+    height: 20px;
+    background-color: $medium-color;
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+
+    div {
+      height: 100%;
+      color: #fff;
+      text-align: center;
+      background-color: $main-color;
+    }
+  }
+}
+
+// about
+#about {
+  .about-info {
+    display: grid;
+    grid-template-areas: "bioimage bio bio";
+    grid-gap: 1rem;
+  }
+  .bio-image {
+    grid-area: bioimage;
+  }
+
+  .bio {
+    grid-area: bio;
+    border-left: 3px solid $main-color;
+    padding: 0.8rem;
+
+    h4 {
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+    }
+    p {
+      font-size: 1.3rem;
+      text-align: justify;
+    }
+  }
+}
+
+// contact
+#contact {
+  .contact-icon {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 4rem;
+    justify-content: center;
+    transition-duration: 0.25s;
+
+    .fab {
+      padding: 20px;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.25s;
+      &:hover {
+        transform: scale(1.15);
+        transition-duration: 0.25s;
+        opacity: 0.7;
+      }
+    }
+
+    .facebook {
+      background: #3b5998;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .google {
+      background: #db3236;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .linkedin {
+      background: #0e76a8;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .github {
+      background: #211f1f;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+  .content {
+    padding-top: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+
+    a {
+      color: #fff;
+    }
+    h3:last-child {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@import "media";
+@import "items";

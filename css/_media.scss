@@ -1,0 +1,198 @@
+@media (max-width: 812px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+
+  #contact-info {
+    height: 100%;
+  }
+
+  #process {
+    .container {
+      padding: 0.2rem;
+    }
+  }
+
+  #skills {
+    margin: 0;
+  }
+
+  .skills {
+    grid-gap: 4rem;
+  }
+
+  .icon-bar {
+    top: 90%;
+  }
+  #contact-info .contact-content {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .items {
+    .item {
+      &-image {
+        width: 300px;
+        height: 180px;
+      }
+
+      &-text-wrap {
+        width: 100%;
+
+        button {
+          width: 50%;
+
+          h1 {
+            font-size: 10px;
+          }
+        }
+      }
+
+      &-text-title {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .items {
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-inner {
+      height: 10rem;
+    }
+  }
+
+  .icon-bar {
+    display: none;
+  }
+
+  // Stack grid
+  #process .process {
+    grid-template-columns: 1fr;
+  }
+
+  #process,
+  #skills {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #about {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #about .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio";
+  }
+  .skills {
+    padding: 0;
+    h1 {
+      font-size: 20px;
+    }
+    grid-template-areas:
+      "html css"
+      "sass javaScript"
+      "bsrap git";
+    grid-gap: 2rem;
+  }
+  #bars {
+    padding-top: 0;
+  }
+  #contact {
+    .contact-icon {
+      grid-gap: 1rem;
+      .fab {
+        width: 30px;
+      }
+    }
+    .content {
+      font-size: 0.8rem;
+
+      h3:last-child {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .item {
+    margin: 0;
+  }
+}
+
+// landscape mode
+@media (max-height: 580px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+  .icon-bar {
+    display: none;
+  }
+  #process {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  #contact {
+    .contact-icon {
+      .fab {
+        margin: 0 -5px;
+      }
+    }
+    .content {
+      font-size: 0.8rem;
+    }
+  }
+
+  .items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      .lead {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
