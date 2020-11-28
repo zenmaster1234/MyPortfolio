@@ -140,6 +140,7 @@ input[class^="btn-"]:hover {
 * {
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 body {
@@ -631,16 +632,30 @@ img {
   }
 }
 
+#work-a .code i {
+  color: #000;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+#work-a .code i:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  opacity: 0.7;
+}
+
 .items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .item {
@@ -649,7 +664,7 @@ img {
   overflow: hidden;
   -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
-  margin: 20px;
+  margin: 30px;
 }
 
 .item::after {
